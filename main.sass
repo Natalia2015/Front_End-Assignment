@@ -1,0 +1,369 @@
+$text_color: #2F2F2F
+$whitetext_color: #FFFFFF
+$font-family: "RobotoRegular", Helvetica, Arial, sans-serif
+$font-bold: "proximanova-bold", sans-serif
+$font-light: "proximanova-light", sans-serif
+$background_color: rgba(23,218,163,1.0)
+
+
+
+//mixins
+
+=font_text
+	color: $text_color
+	font-size: 16px
+	font-family: $font-family
+
+=font_header
+	color: black
+	font-size: 28px
+	font-family: $font-family
+
+=font_maxiheader
+	color: $text_color
+	font-size: 28px
+	font-family: $font-family
+
+=flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex 
+	flex-direction: row
+
+=picgallery_member($image_address)
+	background-image: $image_address
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 300px
+	text-align: center
+	transition: transform .3s, opacity .3s
+	width: 100%
+	border: none
+	margin: none
+	padding: none
+	overflow: hidden
+	position: relative
+	&:hover
+		transform: scale(1.1, 1.1)
+		.wrapinside_picgallery_member
+			display: none	
+
+=border-radius($num)
+	-webkit-border-radius: $num
+	-moz-border-radius:    $num
+	-ms-border-radius:     $num
+	border-radius:         $num
+
+=butn($textcolor, $backcolor)
+	color: $textcolor
+	display: inline-block
+	padding: none
+	font-size: 15px
+	border: 0
+	background-color: $backcolor
+	+border-radius(5px)
+	font-family: "brandon-grotesque", sans-serif
+	font-weight: 500
+	text-align: center
+	vertical-align: middle
+	transition: background 0.3s
+	&:hover
+		background-color: darken($backcolor, 10%)
+
+
+//adapting bootstrap features
+.navbar-default
+	background-color: white !important
+	border: none !important
+
+.form-control
+	border: none !important
+	box-shadow: none !important
+	transition: none !important
+
+.navbar
+	margin: none !important
+	border: none !important
+	padding: none !important
+
+h3, p
+	text-align: center
+	color: #d3d3d3 !important
+	
+#footer_list
+	li
+		display: block
+		margin-right: 20px
+		list-style: none
+		padding: 0
+		a
+			font-size: 12px
+			line-height: 1.66667
+			font-weight: 400
+			letter-spacing: normal
+			position: relative
+			z-index: 1
+			color: grey
+
+.title_section
+	color: $text_color
+	font-size: 12px
+	font-weight: 700
+
+.footer_chapters
+	+flex
+	justify-content: space-around
+	width: 100%
+
+.footer_grey
+	background-color: #ededed
+
+.picgallery_member1
+	+picgallery_member(url(https://scontent.oculuscdn.com/t64.5771-25/11162714_283652092025521_547216123_n.jpg/eve-valkyrie.jpg))
+
+.picgallery_member2
+	+picgallery_member(url(https://scontent.oculuscdn.com/t64.5771-25/12504834_1610504179262797_1233001088_n.jpg/luckys-tale.jpg))
+
+.picgallery_member3
+	+picgallery_member(url(https://scontent.oculuscdn.com/t64.5771-25/12680264_165436440535334_659901318_n.jpg/oc3-stage-image.jpg))
+
+.zero_border 
+	padding-right: 0px !important
+	padding-left: 0px !important
+	overflow: hidden
+
+.wrapinside_picgallery_member
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,0.5)
+	display: block
+	z-index: 999
+	text-align: center
+	vertical-align: middle
+
+// the try
+
+.grey
+	background-color: #151515
+	padding-top: 40px
+	padding-bottom: 40px
+	padding-left: 33px
+
+.inputContainer
+	label 
+		margin-left: 0px
+		position: relative
+		top: 0
+		left: 0px
+		font-size: 18px
+		color: #8a959e
+		margin: 16px 0px 0px 16px
+		font-weight: 400
+		z-index: 100
+		
+	.inputContainer
+	span, i
+		position: relative
+		z-index: 100
+
+.inputContainer
+	height: 80px
+
+input
+	text-rendering: auto
+	color: initial
+	letter-spacing: normal
+	word-spacing: normal
+	text-transform: none
+	text-indent: 25px
+	text-shadow: none
+	display: inline-block
+	text-align: start
+	margin: 0em 0em 0em 0em
+	font: 13.3333px Arial
+
+.inputuser
+	position: absolute
+	z-index: 0
+	left: -10px
+	width: 280px
+	height: 63px
+	padding-left: 48px
+	background: white
+	width: 232px
+	line-height: 1em
+	-moz-border-radius: 3px
+	-webkit-border-radius: 3px
+	border-radius: 3px
+	padding: 18px 15px
+	margin-right: 10px
+	border: 1px solid #d4d7da
+
+ul
+	margin: 0px
+
+
+///the start
+
+.wrap_search
+	position: absolute
+	bottom: 10px
+	left: 40%
+	width: 300px
+	height: 50px
+	margin: none
+	padding: none
+
+.wrap_search1
+	position: relative
+	width: 300px
+	height: 50px
+	margin: none
+	padding: none
+	border: 0.5px solid #d4d7da	
+
+.top_auto
+	background-color: #f7f7f7
+	overflow: hidden
+
+.try-business
+	float: left
+	margin: 30px 0 0 0
+	text-align: center
+	background: none
+	transition: opacity 0.5s ease-in-out 0s
+
+.try
+	display: block
+	margin-top: 15px
+	font-size: 16px
+	color: #47525d
+	text-align: left
+	margin-bottom: 0
+
+.background_hero
+	background-image: url("https://cfl.dropboxstatic.com/static/images/business/homepage/background--pc--female-vfl1oeEA8.jpg")
+	background-color: #f7f7f7
+	height: 700px
+	
+
+.search
+	width: 300px
+	display: inline-block
+	margin-top: 5px
+
+#search_site
+	display: inline !important
+	border: none
+
+.false_button
+	top: 0px
+	width: 20px
+	height: 15px
+	background-color: white
+	position: relative
+	display: inline-block
+	font-family: 'Glyphicons Halflings'
+	font-style: normal
+	font-weight: 400
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	text-align: center
+	white-space: nowrap
+
+#rollout
+	display: none
+	background-color: grey
+	height: 180px
+
+.topsection
+	position: relative
+	top: 40%
+	padding-left: 3%
+	padding-right: 30%
+
+
+.list-group-item
+	font-size: 12px
+	color: #CCC
+
+
+.hero_header
+	display: block
+	color: #47525d
+	margin: 0 auto
+//	font-size: 47.25px
+//	max-width: 520px
+	padding-bottom: 0
+	font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
+
+.sub_hero_header
+	display: block
+	color: #47525d
+	margin: 0 auto
+	font-weight: 100
+	padding-bottom: 20px
+	line-height: 1.5
+	font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
+	padding: 0
+
+
+.menu_style
+	+font_text
+	display: inline
+	padding-top: 15px
+	padding-bottom: 15px
+	line-height: 20px
+	position: relative
+	display: block
+	padding: 10px 15px
+	font-weight: normal
+	text-decoration: none
+	&:hover
+		background-color: grey
+
+.btn4
+	+butn(#FFF,#ff3366)
+	position: absolute
+	left: -10px
+	height: 63px
+	width: 229px
+
+.btn5
+	+butn(#FFF,#0071e0)
+	position: relative
+	font-size: 20px
+	height: 63px
+	width: 500px
+	
+.top_30
+	margin-top: 20px
+
+.bottom_20
+	margin-bottom: 10px
+	
+ul 
+	list-style-type: none
+	li
+		display: inline
+		a
+			text-decoration: none
+			padding: 5px 10px
+			font-size: 15px
+			color: #CCC
+			&:hover
+				color: black
+				text-decoration: none
+
+.fa
+	&:hover
+		color: white
+
+.col-centered
+	margin: 0 auto
